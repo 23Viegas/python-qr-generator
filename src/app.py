@@ -2,11 +2,13 @@ import streamlit as st
 from io import BytesIO
 from generator import gerar_qrcode
 
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 st.set_page_config(
     page_title="QR Code Generator",
-    page_icon="🔳",
+    page_icon=str(BASE_DIR / "assets" / "logo.png"),
     layout="centered"
 )
 
